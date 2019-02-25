@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import CommentBox from './CommentBox';
+import CommentList from './CommentList';
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        Just a New App
+        <CommentBox/>
+        <CommentList/>
       </div>
     );
   }
