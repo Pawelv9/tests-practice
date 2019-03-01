@@ -18,6 +18,7 @@ handleSubmit = event => {
 
   render() {
     return (
+    <div>
       <form onSubmit={this.handleSubmit}>
         <h4>Add a comment</h4>
         <textarea onChange={this.handleChange} value={this.state.comment}/>
@@ -25,7 +26,9 @@ handleSubmit = event => {
           <button>Submit comment</button>
         </div>
       </form>
-    )
+      <button onClick={this.props.fetchComments}>Fetch Comments</button>   
+    </div>   
+  )
   }
 }
 
