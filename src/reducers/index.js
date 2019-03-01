@@ -1,10 +1,6 @@
-import { SAVE_COMMENT } from 'actions/types';
+import { combineReducers } from "redux";
+import commentsReducer from 'reducers/comments'
 
-export default (state = [], action) => {
-    switch(action.type) {
-        case SAVE_COMMENT:
-            return [...state, action.payload];
-        default:
-            return state;
-    }
-};
+export default combineReducers({
+    comments: commentsReducer
+})
